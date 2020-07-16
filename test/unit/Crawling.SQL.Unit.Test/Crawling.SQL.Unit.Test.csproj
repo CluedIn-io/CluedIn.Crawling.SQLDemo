@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <AssemblyTitle>Crawling.SQL.Unit.Test</AssemblyTitle>
+    <Product>Crawling.SQL.Unit.Test</Product>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\src\SQL.Core\Crawling.SQL.Core.csproj" />
+    <ProjectReference Include="..\..\..\src\SQL.Crawling\Crawling.SQL.csproj" />
+    <ProjectReference Include="..\..\..\src\SQL.Infrastructure\Crawling.SQL.Infrastructure.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Update="Moq" Version="4.10.1" />
+  </ItemGroup>
+</Project>

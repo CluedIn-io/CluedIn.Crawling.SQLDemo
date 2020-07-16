@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyTitle>Crawling.SQL.Integration.Test</AssemblyTitle>
+    <Product>Crawling.SQL.Integration.Test</Product>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <RootNamespace>Crawling.SQL.Integration.Test</RootNamespace>
+    <AssemblyName>Crawling.SQL.Integration.Test</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="CluedIn.Crawling" Version="3.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\src\SQL.Core\Crawling.SQL.Core.csproj" />
+    <ProjectReference Include="..\..\..\src\SQL.Crawling\Crawling.SQL.csproj" />
+    <ProjectReference Include="..\..\..\src\SQL.Infrastructure\Crawling.SQL.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\..\src\SQL.Provider\Provider.SQL.csproj" />
+  </ItemGroup>
+</Project>

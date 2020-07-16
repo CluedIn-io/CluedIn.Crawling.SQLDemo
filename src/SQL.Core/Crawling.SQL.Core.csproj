@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <ProjectGuid>{46D89BED-5F80-454B-9496-3163759DBEB4}</ProjectGuid>
+    <RootNamespace>CluedIn.Crawling.SQL.Core</RootNamespace>
+    <AssemblyName>CluedIn.Crawling.SQL.Core</AssemblyName>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyTitle>Crawling.SQL.Core</AssemblyTitle>
+    <Product>Crawling.SQL.Core</Product>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="CluedIn.Core" Version="3.0.0" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <ProjectGuid>{E1744515-A08B-4972-9185-0D56131AC429}</ProjectGuid>
+    <RootNamespace>CluedIn.Provider.SQL</RootNamespace>
+    <AssemblyName>CluedIn.Provider.SQL</AssemblyName>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <AssemblyTitle>CluedIn.Provider.SQL</AssemblyTitle>
+    <Product>CluedIn.Provider.SQL</Product>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Resources\cluedin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SQL.Core\Crawling.SQL.Core.csproj" />
+    <ProjectReference Include="..\SQL.Infrastructure\Crawling.SQL.Infrastructure.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\cluedin.png" />
+    <EmbeddedResource Include="SQLProviderComponent.config">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="CluedIn.Core" Version="3.0.0" />
+    <PackageReference Include="CluedIn.Core.Agent" Version="3.0.0" />
+    <PackageReference Include="CluedIn.Crawling" Version="3.0.0" />
+    <PackageReference Include="CluedIn.Server" Version="3.0.0" />
+  </ItemGroup>
+</Project>

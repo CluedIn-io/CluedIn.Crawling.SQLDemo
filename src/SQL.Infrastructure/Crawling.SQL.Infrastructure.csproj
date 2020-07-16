@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <ProjectGuid>{DE5BE162-01C7-4D2F-98F4-144E2EEB5993}</ProjectGuid>
+    <RootNamespace>CluedIn.Crawling.SQL.Infrastructure</RootNamespace>
+    <AssemblyName>CluedIn.Crawling.SQL.Infrastructure</AssemblyName>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyTitle>Crawling.SQL.Client</AssemblyTitle>
+    <Product>Crawling.SQL.Client</Product>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="CluedIn.Core" Version="3.0.0" />
+    <PackageReference Include="CluedIn.Crawling" Version="3.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SQL.Core\Crawling.SQL.Core.csproj" />
+  </ItemGroup>
+</Project>
