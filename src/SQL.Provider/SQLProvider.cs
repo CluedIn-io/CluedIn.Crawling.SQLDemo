@@ -79,6 +79,7 @@ namespace CluedIn.Provider.SQL
                 //TODO add the transformations from specific CrawlJobData object to dictionary
                 // add tests to GetHelperConfigurationBehaviour.cs
                 dictionary.Add(SQLConstants.KeyName.ConnectionString, sqlCrawlJobData.ConnectionString);
+                dictionary.Add(SQLConstants.KeyName.TableName, sqlCrawlJobData.TableName);
             }
 
             return await Task.FromResult(dictionary);
